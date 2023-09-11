@@ -8,10 +8,10 @@
  <p>{{product.price |currency}}</p>
  <div class="d-flex justify-content-start align-items-center">
   <!-- + |-| addBtn-->
-  <i class="fa fa-minus-square text-danger mx-2" style="font-weight:bold; cursor: pointer;"></i>
-  <span style="font-weight: bold;">5</span>
-  <i class="fa fa-plus-square text-danger mx-2" style="font-weight:bold; cursor: pointer;"></i>
-  <button class="btn btn-outline-danger btn-lg ml-5">Add To card</button>
+  <i (click)="decreamentQuentity()" class="fa fa-minus-square text-danger mx-2" style="font-weight:bold; cursor: pointer;"></i>
+  <span style="font-weight: bold;">{{quntity}}</span>
+  <i (click)="increamentQuentity()" class="fa fa-plus-square text-danger mx-2" style="font-weight:bold; cursor: pointer;"></i>
+  <button (click)="addItemTobasket()" class="btn btn-outline-danger btn-lg ml-5">Add To card</button>
  </div>
   </div>
   <div class="row">

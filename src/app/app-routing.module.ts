@@ -13,6 +13,9 @@ const routes: Routes = [
   {path:'servererror',component:ServerErrorComponent,data:{breadcrumb:'Server Error'}},
 
   {path:'shop',loadChildren:()=>import('./shop/shop.module').then(mo=>mo.ShopModule),data:{breadcrumb:'Shop'}},
+  {path:'basket',loadChildren:()=>import('./basket/basket.module').then(mo=>mo.BasketModule),data:{breadcrumb:'basket'}},
+  {path:'checkout',loadChildren:()=>import('./checkout/checkout.module').then(mo=>mo.CheckoutModule),data:{breadcrumb:'checkout'}},
+
   {path:'test-error',component:TestErrorComponent,data:{breadcrumb:'Test Error'}},
   {path:'**',redirectTo:'/notfound',pathMatch:'full'}
 ];

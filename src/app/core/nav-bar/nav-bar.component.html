@@ -17,9 +17,9 @@
     </ul>
 
     <div class="d-flex flex-weap align-items-center">
-      <a href="">
+      <a routerLink="/basket" >
         <i class="fa fa-shopping-cart text-dark mr-5 fa-2x" style="margin-right:30px; "></i>
-        <div class="card-number">3</div>
+        <div class="card-number"  *ngIf="(basket$ | async) as basket">{{basket.basketItems.length}}</div>
       </a>
       <a  class="btn btn-outline-primary me-2">Login</a>
       <a  class="btn btn-primary">Sign-up</a>
